@@ -1,4 +1,4 @@
-# Christopher Bentson
+# CHRISTOPHER BENTSON
 
 **Senior AI & Full-Stack Engineer · Lead Software Engineer**
 
