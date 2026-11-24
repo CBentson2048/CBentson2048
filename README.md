@@ -1,16 +1,20 @@
 # CBentson2048
 
-**The next agent should know how we got here.**
+**Senior AI & Full-Stack Engineer · Lead Software Engineer**
 
-Imagine a developer and an AI agent debugging a webhook that updates a record twice. They reproduce the failure and ship a fix. The next morning, a teammate opens a different AI tool and asks why the handler now checks event IDs. The new agent has to infer the reason from the diff.
+I build AI-enabled products across web, mobile, and backend services. I lead technical design and stay hands-on through implementation, testing, and release.
 
-I want to build the infrastructure for that handoff. When work moves between people and tools, the next session should surface what the team tried, why it made a decision, and where to verify it.
+## Engineering experience
 
-## Where I’d start
+- **AI systems.** I’ve built workflows that coordinate multiple tools, moved model providers behind a common interface, and written evaluations for routing decisions and provider behavior.
+- **Full-stack engineering.** My TypeScript work spans React web apps, React Native mobile clients, NestJS APIs, and PostgreSQL. I’ve unified design tokens across web and mobile, built typed API integrations, and written database migrations.
+- **Technical leadership.** I turn open-ended requirements into a design, a sequence of reviewable changes, and rollout criteria. For an AI routing change, I added a shadow mode to evaluate the new router on real inputs before enabling it.
 
-- **Make sync recoverable.** Save progress as sessions are imported from each tool. Key records by source and session ID so a retry updates the same record.
-- **Give every answer a source.** Apply sharing permissions before ranking results. Use the same retrieval service for the CLI and MCP server, and point each answer to the relevant message in the original session.
-- **Measure whether the handoff worked.** Use tasks with known decisions to test whether agents recover the right evidence and complete the task. Track time to resolution and cost per completed task.
+## Shared context for AI agents
+
+Imagine fixing a duplicate webhook update with one AI tool. The next morning, a teammate opens another tool and asks why the handler now checks event IDs. Their agent has the diff and needs the reasoning from the original session.
+
+I’d build that handoff with replayable sync and a retrieval service shared by the CLI and MCP server. The service would enforce session permissions before ranking results and link each answer to the message that supports it. I’d evaluate whether the agent finds the right decision and completes the task, then track time to resolution and cost per completed task.
 
 <details>
 <summary>Read an example handoff</summary>
